@@ -1,4 +1,6 @@
 #include <Arduino.h>
+
+// include/
 #include "BMP280.h"
 #include "Bluetooth.h"
 
@@ -34,7 +36,7 @@ void loop() {
   delay(3000);
 }
 
-// Serial.begin(baudrate) -> indít
-// Serial.avaiable() -> van adat küldve?
-// Serial.print(); -> ír
-// Serial.readString() -> olvas
+// Serial.begin(baudrate) -> set
+// Serial.avaiable() -> is there any data to send?
+// Serial.print(); -> write
+// Serial.readString() -> read

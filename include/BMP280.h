@@ -12,6 +12,7 @@ private:
     float local_hPa = 1015.0;
 
 public:
+    // Start useing defaults
     String start(int ADDRESS = 0x76, int SDA = 21, int SCL = 22){
         Wire.begin(SDA, SCL);
 
