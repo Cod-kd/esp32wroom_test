@@ -1,3 +1,8 @@
+/*
+AUTHOR: @Kamiko
+Discord: k.a.m.i.k.o
+Version: 1.0
+*/
 #include <Arduino.h>
 
 // include/

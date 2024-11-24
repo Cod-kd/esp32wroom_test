@@ -1,3 +1,8 @@
+/*
+AUTHOR: @Kamiko
+Discord: k.a.m.i.k.o
+Version: 1.0
+*/
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BMP280.h>
