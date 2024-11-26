@@ -12,6 +12,17 @@ Version: 1.0
 Bluetooth bt;
 BMP280 bmp280;
 
+void parseCommand(const String& input) {
+    String commandPrefix = "set local_hPa:";
+    if (input.startsWith(commandPrefix)) {
+        String valueStr = input.substring(commandPrefix.length());
+        valueStr.trim();
+        bmp280.setLocalPressure(valueStr.toFloat());
+    } else {
+        Serial.println("Unknown command");
+    }
+}
+
 void setup() {
   Serial.begin(9600);
   Serial.println();
@@ -23,8 +34,10 @@ void loop() {
   
   // message from bluetooth
   if(bt.hasData()){
-    Serial.print("\nÜzenet bluetooth-ról: ");
-    Serial.println(bt.transmit());
+    String command = bt.transmit();
+    Serial.print("\nUtasítás bluetooth-ról: ");
+    Serial.println(command);
+    parseCommand(command);
   }
 
   bmp280.measure();

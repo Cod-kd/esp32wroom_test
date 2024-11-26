@@ -35,8 +35,9 @@ public:
         return "A BMP280 aktív.";
     }
 
-    void setLocalPressure(float hPa){
+    String setLocalPressure(float hPa){
         local_hPa = hPa;
+        return "A helyi nyomás beállítva: ";
     }
 
     float getTemperature(){
