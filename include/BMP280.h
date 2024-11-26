@@ -35,9 +35,9 @@ public:
         return "A BMP280 aktív.";
     }
 
-    String setLocalPressure(float hPa){
+    String setSeaPressure(float hPa){
         local_hPa = hPa;
-        return "A helyi nyomás beállítva: ";
+        return "A tengerszintre korrigált nyomás beállítva.";
     }
 
     float getTemperature(){

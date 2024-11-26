@@ -13,11 +13,11 @@ Bluetooth bt;
 BMP280 bmp280;
 
 void parseCommand(const String& input) {
-    String commandPrefix = "set local_hPa:";
+    String commandPrefix = "set sea_hPa:";
     if (input.startsWith(commandPrefix)) {
         String valueStr = input.substring(commandPrefix.length());
         valueStr.trim();
-        bmp280.setLocalPressure(valueStr.toFloat());
+        Serial.println(bmp280.setSeaPressure(valueStr.toFloat()));
     } else {
         Serial.println("Unknown command");
     }
