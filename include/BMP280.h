@@ -14,7 +14,7 @@ private:
     float temperature;
     float pressure;
     float altitude;
-    float local_hPa = 1015.0;
+    float local_hPa = 1013.25;
 
 public:
     // Start useing defaults
